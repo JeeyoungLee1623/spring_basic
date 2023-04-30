@@ -20,7 +20,9 @@ public class HelloController {
     }
 
     // jsp / thymeleaf 같은 템플릿 엔진을 사용하여 화면을 return 할 때에는 responsebody 를 사용하면 안된다.
+    // responsebody 없고, string 으로 되어 있으면 thymeleaf 로 된다.
     // 그리고 Model 이라는 객체에 data 를 담아 return xxx 를 하여 xxx.html 파일로 테이터를 보낸다.
+
     @GetMapping("hello-thymeleaf")
     public String hello2(Model model){
         model.addAttribute("getdata", "hello2 world");
