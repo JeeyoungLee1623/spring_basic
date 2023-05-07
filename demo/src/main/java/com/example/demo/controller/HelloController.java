@@ -43,7 +43,7 @@ public class HelloController {
         return "ok";
     }
 
-    @GetMapping("hello-get-form-req")
+    @GetMapping("hello-post-form-req")
     public String helloGetFormReq(){
         return "hello-post-form-req";
 
@@ -93,6 +93,20 @@ public class HelloController {
         System.out.println("이메일: " + hello.getEmail());
         System.out.println("비밀번호: " + hello.getPassword());
         return "ok";
+    }
+
+    // ResponseBody 어노테이션이 붙어 있고, return 타입이 객체이면 Spring 이 json 형태로 변환해준다.
+    @PostMapping("hello-json-response")
+    @ResponseBody
+    public GoodBye helloJsonResponse(@RequestBody Hello hello){
+        System.out.println("이름: " + hello.getName());
+        System.out.println("이메일: " + hello.getEmail());
+        System.out.println("비밀번호: " + hello.getPassword());
+        GoodBye goodBye1 = new GoodBye();
+        goodBye1.setName(hello.getName());
+        goodBye1.setEmail(hello.getEmail());
+        goodBye1.setComments("Thank you");
+        return goodBye1;
     }
 
 
