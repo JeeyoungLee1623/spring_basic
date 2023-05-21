@@ -10,7 +10,8 @@ public class HelloController {
     // http://localhost:8080/hello 로 요청시 hello 메서드에서 처리 
     // http 는 국제 통신 프로토콜 이다. 전세계 통용 https 는 (s-secure) 보안이 강화된 통신 프로토콜
     // port 란 한 IP 내에 여러 프로그램을 구분짓는 단위 (하나의 컴퓨터에서 중복 사용은 안됨) (집주소가 IP, 각 집의 방 문이 Port)
-    // data 만을 return 할 때는 responseBody 를 사용한다.
+    // data 만을 return 할 때는 responseBod
+    // y 를 사용한다.
 
     @GetMapping("hello")
     @ResponseBody
@@ -118,7 +119,8 @@ public class HelloController {
     // 3. json 데이터 형식으로 서버로 보내는 방식 : post 요청시 사용
     // jason 데이터란 {"key1":"value1", "key2":"value2"} 의 형식을 취하는 형태이다.
     // 현대적인 web 서비스에서 대부분의 데이터를 주고 받을 때 json 을 사용한다.
-    // json은 html 의 form 태그처럼 넣어서 보내는 방식이 아니다보니, ajax, react 이런 javascript 프레임워크를 사용하게 된다.
+    // json 은 html 의 form 태그처럼 넣어서 보내는 방식이 아니다보니, ajax, react 이런 javascript 프레임워크를 사용하게 된다.
+
 
 
 
